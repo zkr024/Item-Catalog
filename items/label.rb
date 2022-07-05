@@ -1,13 +1,13 @@
-require_relative 'item'
+require_relative './item'
 
 class Label
   attr_reader :id, :title, :color, :items
 
-  def initialize(title, color, items = [])
+  def initialize(title, color)
     @id = id
     @title = title
     @color = color
-    @items = items
+    @items = []
   end
 
   def add_item(item)

@@ -1,13 +1,13 @@
-require_relative 'item'
-require_relative 'label'
+require_relative './item'
+require_relative './label'
 require 'date'
 
 class Book < Item
   attr_accessor :publish_date, :publisher, :cover_state, :title
 
   def initialize(title, publish_date, publisher, cover_state, author, label)
-    super(title, publish_date, archived: false)
-    @publish_date = DateTime.parse(publish_date)
+    super(publish_date)
+    @publish_date = publish_date
     @publisher = publisher
     @cover_state = cover_state
     add_author(author)

@@ -1,18 +1,13 @@
-require_relative 'book'
-require_relative 'create_label'
+require_relative '../items/book'
 require_relative 'create_author'
+require_relative 'create_label'
 
 class CreateBook
-  def initialize
-    @create_label = CreateLabel.new
-    @create_author = CreateAuthor.new
-  end
-
-  def create_book
+  def create_book(book, label, author)
     puts 'Enter book title:'
     title = gets.chomp
 
-    author = @create_author.create_author
+    create_author(author)
 
     puts 'Enter publish date in order of YYYY-MM-DD:'
     publish_date = gets.chomp
@@ -23,8 +18,12 @@ class CreateBook
     puts 'Enter book condition (bad, good, new):'
     cover_state = gets.chomp
 
-    label = @create_label.create_label
+    create_label(label)
 
-    Book.new(title, publish_date, publisher, cover_state, author, label)
+    new_book = Book.new(title, publish_date, publisher, cover_state, @author, @label)
+
+    book << new_book
+
+    puts 'Book succesfully added!!!'
   end
 end

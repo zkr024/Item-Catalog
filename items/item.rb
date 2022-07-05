@@ -1,12 +1,13 @@
 require 'date'
-require 'label'
+require_relative './label'
+require 'securerandom'
 
 class Item
   attr_reader :id, :archived
   attr_accessor :author, :genre, :source, :label, :publish_date
 
-  def initialize(id, publish_date, archived: false)
-    @id = id
+  def initialize(publish_date, archived: false)
+    @id = SecureRandom.uuid
     @publish_date = publish_date
     @archived = archived
   end
@@ -27,6 +28,6 @@ class Item
 
   def can_be_archived?
     now = DateTime.now.year
-    now - @publish_date.to_i >= 10
+    now - @publish_date.to_i > 10
   end
 end
