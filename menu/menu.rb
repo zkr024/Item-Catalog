@@ -3,9 +3,10 @@
   { value: '2', message: 'List all music albums' },
   { value: '3', message: 'List all genres' },
   { value: '4', message: 'List all labels' },
-  { value: '5', message: 'Add a book' },
-  { value: '6', message: 'Add a music album' },
-  { value: '7', message: 'Exit' }
+  { value: '5', message: 'List all authors' },
+  { value: '6', message: 'Add a book' },
+  { value: '7', message: 'Add a music album' },
+  { value: '8', message: 'Exit' }
 ]
 
 def print_menu
@@ -22,5 +23,5 @@ def load_menu
 end
 
 def valid_input?(input)
-  %w[1 2 3 4 5 6 7].include?(input)
+  %w[1 2 3 4 5 6 7 8].include?(input)
 end

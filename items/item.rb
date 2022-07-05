@@ -1,5 +1,4 @@
 require 'date'
-require_relative './label'
 require 'securerandom'
 
 class Item
