@@ -7,6 +7,7 @@ class Book < Item
 
   def initialize(title, publish_date, publisher, cover_state, author, label)
     super(publish_date)
+    @title = title
     @publish_date = publish_date
     @publisher = publisher
     @cover_state = cover_state
