@@ -1,4 +1,5 @@
 require 'date'
+require 'label'
 
 class Item
   attr_reader :id, :archived
@@ -8,6 +9,14 @@ class Item
     @id = id
     @publish_date = publish_date
     @archived = archived
+  end
+
+  def add_author(author_name)
+    @author = author_name
+  end
+
+  def add_label(label)
+    @label = label
   end
 
   def move_to_archived
