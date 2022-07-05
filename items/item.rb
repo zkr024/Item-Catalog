@@ -3,8 +3,8 @@ require_relative './label'
 require 'securerandom'
 
 class Item
-  attr_reader :id, :archived
-  attr_accessor :author, :genre, :source, :label, :publish_date
+  attr_reader :id, :archived, :genre, :author
+  attr_accessor :source, :label, :publish_date
 
   def initialize(publish_date, archived: false)
     @id = SecureRandom.uuid
@@ -22,6 +22,16 @@ class Item
 
   def move_to_archived
     @archived = can_be_archived?
+  end
+
+  def genre=(genre)
+    @genre = genre
+    genre.items << self unless genre.items.include?(self)
+  end
+
+  def author=(author)
+    @author = author
+    author.items << self unless author.items.include?(self)
   end
 
   private
