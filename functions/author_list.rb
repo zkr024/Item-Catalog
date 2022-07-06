@@ -5,7 +5,7 @@ class AuthorList
     else
       puts 'List of Authors: '
       (author.map.with_index do |a, i|
-        puts "#{i + 1}) First name: #{a.first_name} - last name: #{a.last_name}"
+        puts "#{i + 1}) #{a.first_name} #{a.last_name}"
       end)
     end
   end

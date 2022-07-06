@@ -17,13 +17,7 @@ class Book < Item
   end
 
   def can_be_archived?
-    return true if super || cover_state == 'bad'
-
-    false
-  end
-
-  def to_hash
-    { title: @title, publish_date: @publish_date.strftime('%Y-%m-%d'), publisher: @publisher, cover_state: @cover_state,
-      author: @author.to_hash, label: @label.to_hash }
+    book = Item.new(@publish_date).move_to_archived
+    book || @cover_state == 'bad'
   end
 end
