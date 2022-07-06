@@ -18,6 +18,16 @@ To get a local copy up and running follow these simple example steps:
 
 ![image](https://user-images.githubusercontent.com/93548973/177592075-549740ed-ac4d-4fb9-817b-24ee09260992.png)
 
+## Tests
+
+* Apply unit tests to the classes and methods.
+* Install RSpec by using the following command in the terminal:
+> gem install rspec
+
+* Each class has different tests that can be checked on the terminal ->
+  - Once at the root of the project, run the following command:
+> rspec spec
+
 
 ## Authors
 
