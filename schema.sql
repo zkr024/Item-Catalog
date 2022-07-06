@@ -45,3 +45,11 @@ CREATE TABLE MusicAlbum
   on_spotify BOOLEAN
   FOREIGN KEY (id) REFERENCES Items(id)
 );
+
+CREATE TABLE Game 
+(
+  id SERIAL PRIMARY KEY
+  mutiplayer VARCHAR(100),
+  last_played_at DATE,
+  FOREIGN KEY (id) REFERENCES Items (id)
+);
