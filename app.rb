@@ -10,13 +10,15 @@ require './functions/label_list'
 require './functions/author_list'
 require './functions/album_list'
 require './functions/genre_list'
+require './functions/game_list'
 require './functions/add_album'
+require './functions/add_game'
 require './saveData/save_data'
 
 
 def app
   record = Record.new
-  load_data(record.album, record.genre, record.book, record.label, record.author)
+  load_data(record.album, record.genre, record.book, record.label, record.author, record.game)
   open_message
 
   loop do
@@ -25,13 +27,15 @@ def app
       case @input
       when '1' then BookList.new.book_list(record.book)
       when '2' then AlbumList.new.album_list(record.album)
-      when '3' then GenreList.new.genre_list(record.genre)
-      when '4' then LabelList.new.label_list(record.label)
-      when '5' then AuthorList.new.author_list(record.author)  
-      when '6' then CreateBook.new.create_book(record.book, record.label, record.author)
-      when '7' then AddAlbum.new.add_album(record.album, record.genre)
-      when '8'
-        save_data(record.album, record.genre, record.book, record.label, record.author)
+      when '3' then GameList.new.game_list(record.game)  
+      when '4' then GenreList.new.genre_list(record.genre)
+      when '5' then LabelList.new.label_list(record.label)
+      when '6' then AuthorList.new.author_list(record.author)  
+      when '7' then CreateBook.new.create_book(record.book, record.label, record.author)
+      when '8' then AddAlbum.new.add_album(record.album, record.genre)
+      when '9' then AddGame.new.add_game(record.game, record.author)
+      when '0'
+        save_data(record.album, record.genre, record.book, record.label, record.author, record.game)
         break
       end
     else

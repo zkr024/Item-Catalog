@@ -1,5 +1,5 @@
 class Record
-  attr_accessor :book, :label, :author, :album, :genre
+  attr_accessor :book, :label, :author, :album, :genre, :game
 
   def initialize
     @book = []
@@ -7,5 +7,6 @@ class Record
     @author = []
     @album = []
     @genre = []
+    @game = []
   end
 end
