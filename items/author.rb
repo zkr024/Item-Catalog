@@ -11,11 +11,7 @@ class Author
   end
 
   def add_item(item)
-    @items.push(item)
+    @items.push(item) unless @items.include?(item)
     item.add_author(self)
-  end
-
-  def to_hash
-    { first_name: @first_name, last_name: @last_name }
   end
 end
