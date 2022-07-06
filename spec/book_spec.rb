@@ -27,8 +27,9 @@ describe Book do
       expect(book_two.move_to_archived).to be true
     end
 
-    it 'Shows false when the albun is over 10 years published and has a good cover status' do
-      expect(@book.move_to_archived).to be true
+    it 'Shows false when the cover state is good and was published less than 10 years ago' do
+      book_two = Book.new('The Raven', '2015/1/29', 'blackbird designs', 'good', @author, @label)
+      expect(book_two.move_to_archived).to be false
     end
   end
 end
