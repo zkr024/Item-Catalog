@@ -14,9 +14,29 @@
     "Published": "1954-07-29",
     "Publisher": "Allen & Unwin",
     "Status": "Good",
-    "Author_First_Name": "J.R.R",
+    "Author_First_Name": "JRR",
     "Author_Last_Name": "Tolkien",
     "Type": "High-fantasy novel",
     "Color": "black"
+  },
+  {
+    "Title": "Dracula",
+    "Published": "1987-05-26",
+    "Publisher": "Archibald Constable and Company",
+    "Status": "Good",
+    "Author_First_Name": "Bram",
+    "Author_Last_Name": "Stoker",
+    "Type": "Horror",
+    "Color": "red"
+  },
+  {
+    "Title": "The Raven",
+    "Published": "1845-1-29",
+    "Publisher": "Blackbird designs",
+    "Status": "Good",
+    "Author_First_Name": "Edgar",
+    "Author_Last_Name": "Poe",
+    "Type": "Narrative poem",
+    "Color": "Black"
   }
 ]

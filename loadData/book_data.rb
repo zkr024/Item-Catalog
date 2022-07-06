@@ -14,7 +14,7 @@ def book_data(book)
     published = value['Published']
     publisher = value['Publisher']
     status = value['Status']
-    first_name = value['Author_Last_Name']
+    first_name = value['Author_First_Name']
     last_name = value['Author_Last_Name']
     type = value['Type']
     color = value['Color']

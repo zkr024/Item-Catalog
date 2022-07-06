@@ -11,6 +11,10 @@ class Item
     @archived = archived
   end
 
+  def move_to_archived
+    @archived = can_be_archived?
+  end
+
   def add_author(author_name)
     @author = author_name
   end
@@ -19,18 +23,9 @@ class Item
     @label = label
   end
 
-  def move_to_archived
-    @archived = can_be_archived?
-  end
-
   def genre=(genre)
     @genre = genre
     genre.items << self unless genre.items.include?(self)
-  end
-
-  def author=(author)
-    @author = author
-    author.items << self unless author.items.include?(self)
   end
 
   private
