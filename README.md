@@ -1,5 +1,9 @@
 # Item-catalog
 
+## Video presentation
+[Click here](https://drive.google.com/file/d/1B-XR32A_abcT0Q2f8oGe535qpxip1Vte/view?usp=sharing)
+
+## Class Diagram
 ![image](https://user-images.githubusercontent.com/93548973/177593001-7c22c882-f5b9-4b2c-af62-71ad3c36627a.png)
 
 
